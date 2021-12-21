@@ -36,13 +36,13 @@
     });   
    
     
-    // $(document).snowfall('clear');
-    // $(document).snowfall({
-    //     image: "./org/jquery-hb/images/huaban.png",
-    //     flakeCount:60,
-    //     minSize: 5,
-    //     maxSize: 22
-    // });
+    $(document).snowfall('clear');
+    $(document).snowfall({
+        image: "./org/jquery-hb/images/huaban.png",
+        flakeCount:60,
+        minSize: 5,
+        maxSize: 22
+    });
     //timer
     function SetTime(){
         var oDay = document.getElementById("t_d");
