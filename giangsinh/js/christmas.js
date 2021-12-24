@@ -13,14 +13,13 @@
         str += 'Em sẽ là gió, em sẽ là tuyết\n';
         str += ' xuân hạ thu đông là em\n';
         str += 'Bất cứ đâu em thấy\n';
-        str += 'mãi yêu\n';
-        str += 'em';
+        str += 'mãi yêu em';
         Printer.init(str, {
             //speed: 90  
             selector: 'canvas',
             //lnStr: 'root@demo ~/ # ',
             //"curSpeed" : 50,
-            "speed" : 400,  
+            "speed" : 100,  
             // "selector" : 'canvas'
             // "startIndex" : 0,   
             // "endIndex" : 0
@@ -28,7 +27,7 @@
             // "curId" : 'cur',   
             // "curStr" : '_', 
             // "curStyle" : 'font-weight: bold;'
-            "curSpeed" : 800
+            "curSpeed" : 300
             // "lnStr": "" 
         }).print();
         $("#curs").attr("disabled","disabled");
@@ -36,13 +35,13 @@
     });   
    
     
-    $(document).snowfall('clear');
-    $(document).snowfall({
-        image: "./org/jquery-hb/images/huaban.png",
-        flakeCount:60,
-        minSize: 5,
-        maxSize: 22
-    });
+    // $(document).snowfall('clear');
+    // $(document).snowfall({
+    //     image: "./images/icons/snowflake.png",
+    //     flakeCount:60,
+    //     minSize: 5,
+    //     maxSize: 40
+    // });
     //timer
     function SetTime(){
         var oDay = document.getElementById("t_d");

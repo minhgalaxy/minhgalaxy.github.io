@@ -14,6 +14,16 @@
     <!-- SITE TITLE -->
     <link href="./org/font-awesome/css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="./org/loding/css/fakeloader.css">
+    <style type="text/css">
+        .open {
+            z-index: 10000;
+            background: #1f245a;
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            display: grid;
+        }
+    </style>
      <!-- Favicon and touch icons -->
     <link rel="shortcut icon" href="./images/icons/favicon.ico">	
     <link rel="apple-touch-icon" href="<!URL::asset('images/icon/apple-touch-icon.png')>">
@@ -24,9 +34,13 @@
 
 <body>
 <div class="fakeloader"></div>
+<div class="open">
+    <!-- <input type="button" value="PLAY" onclick="play()"> -->
+    <button style="z-index: 1000;" class="btn-start" onclick="play()"><i class="fa fa-play"></i> Bắt đầu</button>
+</div>
 <!-- AUDIO PLAYER -->
-<audio class="audio-player" autoplay loop>
-    <source src="./org/cpts/audio/Queen Of The Night.mp3" type="audio/mpeg">
+<audio id="audio" class="audio-player" autoplay loop>
+    <source src="./org/cpts/audio/SantaTellMe.mp3" type="audio/mpeg">
 </audio>
 
 <!-- BACKGROUND CONTAINER -->
@@ -41,7 +55,7 @@
             <!-- HOME SECTION -->
             <div id="home" class="section active">
                 <!-- TITLE -->
-                <h1 class="snow-text">BayBy，I love you !</h1>
+                <h1 class="snow-text">Baby，I love you !</h1>
                 <!-- COUNTER -->
                 <!--<div class="snow-box">-->
                 <!---->
@@ -52,19 +66,19 @@
                     <div class="countdown" data-date="">
                         <div class="countdown-box">
                             <h2 class="countdown-number" id="t_d">00</h2>
-                            <h4 class="countdown-title">days</h4>
+                            <h4 class="countdown-title">ngày</h4>
                         </div>
                         <div class="countdown-box">
                             <h2 class="countdown-number" id="t_h">00</h2>
-                            <h4 class="countdown-title">hours</h4>
+                            <h4 class="countdown-title">giờ</h4>
                         </div>
                         <div class="countdown-box">
                             <h2 class="countdown-number" id="t_m">00</h2>
-                            <h4 class="countdown-title">minutes</h4>
+                            <h4 class="countdown-title">phút</h4>
                         </div>
                         <div class="countdown-box">
                             <h2 class="countdown-number" id="t_s">00</h2>
-                            <h4 class="countdown-title">seconds</h4>
+                            <h4 class="countdown-title">giây</h4>
                         </div>
                     </div>
                 </div>
@@ -82,7 +96,7 @@
 
                     <div id="perspective">
                         <div id='wrap'>
-                            <img src="./images/lq1.jpg" />
+                            <img src="./images/lq9.jpg" />
                             <img src="./images/lq2.jpg" />
                             <img src="./images/lq3.jpg" />
                             <img src="./images/lq4.jpg" />
@@ -90,7 +104,7 @@
                             <img src="./images/lq6.jpg" />
                             <img src="./images/lq7.jpg" />
                             <img src="./images/lq8.jpg" />
-                            <img src="./images/lq9.jpg" />
+                            <img src="./images/lq1.jpg" />
                             <img src="./images/lq10.jpg" />
                             <p></p>
                         </div>
@@ -108,7 +122,7 @@
                     <!-- CONTACT FORM -->
                     <div class="contact">
                         <div class="form-group">
-                            <input name="submit" width="40px" class="btn-submit" type="button" id="curs" value="click" >
+                            <input name="submit" class="btn-submit btn-start" type="button" id="curs" value="Nhấn vào đây" >
                             <i class="fa fa-hand-o-up"></i>
                         </div>
                     </div>
@@ -119,8 +133,8 @@
                 <div class="container">
                     <!-- CONTACT TEXT -->
                     <div class="shadow-box">
-                        <h3>Designed By 一 RJ</h3>
-                        <p>Anh muốn tỏ tình với em tại đây</p>
+                        <h3>Merry Christmas</h3>
+                        <p>Chúc em giáng sinh an lành ^_^</p>
                     </div>
                     <!-- CONTACT FORM -->
                 </div>
@@ -134,11 +148,18 @@
 <script src="./org/loding/js/fakeloader.min.js"></script>
 <script type="text/javascript">
 	$(".fakeloader").fakeLoader({
-        timeToHide:4000,
+        timeToHide:100,
         bgColor:"#3498db",
         spinner:"spinner4"
 	});
 </script>
+<script>
+      function play() {
+        var audio = document.getElementById("audio");
+        audio.play();
+        $(".open").css('z-index', '0');
+      }
+    </script>
 <script type="text/javascript" src="./org/cpts/js/jquery.fullpage.min.js"></script>
 <script type="text/javascript" src="./org/cpts/js/three.canvas.js"></script>
 <script type="text/javascript" src="./org/cpts/js/script.js"></script>
